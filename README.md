@@ -13,6 +13,8 @@ A somatória da nota atribuída a criança varia de 0 a 13 pontos, indicando ao 
 * Template Method.
 * Interatividade.
 
+## Contribuindo
+Diretrizes de contribuição estão no arquivo [CONTRIBUTING.md](https://github.com/gustavoreino/sistema-pews/blob/main/CONTRIBUTING.md).
 
 ## Membros 
 * Gustavo Alexandre.

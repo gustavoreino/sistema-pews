@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+
+
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin
+      - PGADMIN_DEFAULT_PASSWORD=pgadmin
+    ports:
+      - "4000:80"
+    networks:
+      - postgres-network
+
+
+  postgres:
+    image: postgres:10
+    container_name: postgres10_container
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres-network
+    # Configure em qual diretório você deseja armazenar os dados do SGBD,
+    # para que ao parar o container, você não perca os dados.
+    volumes:
+      - "/mnt/f/docker-volumes/postgres:/var/lib/postgresql/data"
+      # Creates the 'postgres' database scheme when container is created for the first time.
+      - "/mnt/f/docker-volumes/postgres-init:/docker-entrypoint-initdb.d"
+
+
+  backend:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - postgres-network
+    depends_on:
+      - postgres
+
+
+networks:
+  postgres-network:
+    driver: bridge

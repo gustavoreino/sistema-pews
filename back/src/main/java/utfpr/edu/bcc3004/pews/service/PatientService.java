@@ -12,7 +12,7 @@ public class PatientService {
   @Autowired
   private PatientRepository patientRepository;
 
-  public Patient save(Patient paciente) {
-    return patientRepository.save(paciente);
+  public Patient save(Patient patient) {
+    return patientRepository.save(patient);
   }
 }

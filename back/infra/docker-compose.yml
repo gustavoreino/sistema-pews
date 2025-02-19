@@ -6,7 +6,7 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin4_container
     environment:
-      - PGADMIN_DEFAULT_EMAIL=pgadmin
+      - PGADMIN_DEFAULT_EMAIL=pgadmin@gmail.com
       - PGADMIN_DEFAULT_PASSWORD=pgadmin
     ports:
       - "4000:80"

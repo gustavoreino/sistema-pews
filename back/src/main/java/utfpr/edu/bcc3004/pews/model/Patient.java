@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
 
@@ -23,6 +24,7 @@ public class Patient {
   @Past(message = "Data de nascimento deve ser no passado.")
   private Date birthdate;
 
+  @Column(unique=true, nullable=false)
   private String cpf;
 
   private String phone;

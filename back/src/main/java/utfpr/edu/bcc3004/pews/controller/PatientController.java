@@ -7,6 +7,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 
+import java.util.List;
+import java.util.Optional;
+
 import utfpr.edu.bcc3004.pews.model.Patient;
 import utfpr.edu.bcc3004.pews.service.PatientService;
 
@@ -16,6 +19,23 @@ public class PatientController {
 
   @Autowired
   private PatientService patientService;
+
+  @GetMapping
+  public List<Patient> list() {
+    return patientService.findAll();
+  }
+
+  @GetMapping("/{id}")
+  public ResponseEntity<Patient> findById(@PathVariable Long id) {
+    Optional<Patient> patient = patientService.findById(id);
+    return patient.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+  }
+
+  @GetMapping("/cpf/{cpf}")
+  public ResponseEntity<Patient> findByCpf(@PathVariable String cpf) {
+    Patient patient = patientService.findByCpf(cpf);
+    return patient != null ? ResponseEntity.ok(patient) : ResponseEntity.notFound().build();
+  }
 
   @PostMapping
   public ResponseEntity<?> save(@RequestBody @Valid Patient patient, BindingResult result) {

@@ -31,4 +31,32 @@ public class PatientService {
     return patientRepository.findByCpf(cpf);
   }
 
+
+  public Patient update(Long id, Patient patientUpdatedData) {
+    Optional<Patient> entry = patientRepository.findById(id);
+
+    if (entry.isEmpty()) {
+      return null;
+    }
+
+    Patient patient = entry.get();
+
+    if (patientUpdatedData.getName() != null) {
+      patient.setName(patientUpdatedData.getName());
+    }
+    if (patientUpdatedData.getBirthdate() != null) {
+      patient.setBirthdate(patientUpdatedData.getBirthdate());
+    }
+    if (patientUpdatedData.getCpf() != null) {
+      patient.setCpf(patientUpdatedData.getCpf());
+    }
+    if (patientUpdatedData.getPhone() != null) {
+      patient.setPhone(patientUpdatedData.getPhone());
+    }
+    if (patientUpdatedData.getDiagnosis() != null) {
+      patient.setDiagnosis(patientUpdatedData.getPhone());
+    }
+
+    return patientRepository.save(patient);
+  }
 }

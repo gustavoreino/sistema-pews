@@ -48,7 +48,10 @@ public class PatientController {
   }
 
   @PatchMapping("/{id}")
-  public ResponseEntity<Patient> update(@PathVariable Long id, @RequestBody @Valid Patient patient) {
+  public ResponseEntity<?> update(@PathVariable Long id, @RequestBody @Valid Patient patient, BindingResult result) {
+    if (result.hasErrors()) {
+      return ResponseEntity.badRequest().body(result.getAllErrors());
+    }
 
     Patient updatedPatient = patientService.update(id, patient);
 

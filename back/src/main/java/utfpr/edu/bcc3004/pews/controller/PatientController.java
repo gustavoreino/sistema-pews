@@ -46,4 +46,17 @@ public class PatientController {
     Patient res = patientService.save(patient);
     return ResponseEntity.status(HttpStatus.CREATED).body(res);
   }
+
+  @PatchMapping("/{id}")
+  public ResponseEntity<Patient> update(@PathVariable Long id, @RequestBody @Valid Patient patient) {
+
+    Patient updatedPatient = patientService.update(id, patient);
+
+    if (updatedPatient == null) {
+      return ResponseEntity.notFound().build();
+    }
+
+    return ResponseEntity.status(HttpStatus.OK).body(updatedPatient);
+  }
+
 }

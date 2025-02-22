@@ -31,6 +31,9 @@ public class PatientService {
     return patientRepository.findByCpf(cpf);
   }
 
+  public void delete(Long id) {
+    patientRepository.deleteById(id);
+  }
 
   public Patient update(Long id, Patient patientUpdatedData) {
     Optional<Patient> entry = patientRepository.findById(id);

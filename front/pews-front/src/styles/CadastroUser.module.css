@@ -1,0 +1,84 @@
+/* styles/Login.module.css */
+
+.inputLogin {
+    border-width: 0 0 2px 0;
+    border-color: #0f0f0f;
+}
+
+.mamaeInput {
+    width: 100%;
+    display: block;
+}
+
+.guardaFlinstonsInput {
+    width: 100%;
+}
+
+.containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url('../../public/VolcanoParkDS.jpeg') no-repeat center center fixed;  */
+    background-color: #f4f8ff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form {
+    width: 90%;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.2);
+    border: rgba(217, 217, 217, 0.8) 1px solid;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mylabel {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.myinput {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    opacity: 0.5;
+    color: rgba(0, 0, 0, 2);
+}
+
+.mybutton {
+    width: 280px;
+    background-color: #e7852b;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.centroMarcao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relativeMarcao {
+    position: relative;
+}
+
+.footerMarcao {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #3792cb;
+}

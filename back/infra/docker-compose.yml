@@ -31,16 +31,16 @@ services:
       - "/mnt/f/docker-volumes/postgres-init:/docker-entrypoint-initdb.d"
 
 
-  backend:
-    build:
-      context: ../
-      dockerfile: Dockerfile
-    ports:
-      - "8080:8080"
-    networks:
-      - postgres-network
-    depends_on:
-      - postgres
+  # backend:
+  #   build:
+  #     context: ../
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - postgres-network
+  #   depends_on:
+  #     - postgres
 
 
 networks:

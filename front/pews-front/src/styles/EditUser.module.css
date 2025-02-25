@@ -1,0 +1,60 @@
+/* styles/Login.module.css */
+
+.inputLogin{
+    border-width: 0 0 2px 0;
+    border-color: #0F0F0F;
+}
+
+.containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url('../../public/VolcanoParkDS.jpeg') no-repeat center center fixed;  */
+    background-color: #F4F8FF;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  
+  .mylabel {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .myinput {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    opacity: 0.5;
+    color: rgba(0, 0, 0, 2);
+  }
+  
+  .mybutton {
+    width: 100%;
+    background-color: #E7852B;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+
+  

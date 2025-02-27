@@ -4,6 +4,8 @@
 
 import React, { useState } from "react";
 import styles from "@/styles/CadastroUser.module.css";
+import {PatientData} from '@/components/types/PatientType';
+import EditPatient from "@/APIs/editPatient";
 import "@/app/globals.css";
 //import axios from 'axios'; // Importe o Axios para fazer requisições HTTP
 import Navbar from "@/components/Navbar";
@@ -22,7 +24,8 @@ export default function EditUser() {
         // Verifique se as senhas coincidem
 
         // Dados a serem enviados para o backend
-        const userData = {
+
+        const PatientData = {
             name: name,
             cpf: cpf,
             phone: `+55` + phone,
@@ -33,7 +36,7 @@ export default function EditUser() {
         try {
             // Faça uma requisição POST para a rota de criação de usuário no backend
             const response = await axios.post(
-                `${process.env.API_URL}/users/new`,
+                `https://localhost:8080/api/pacientes/`,
                 userData
             );
 

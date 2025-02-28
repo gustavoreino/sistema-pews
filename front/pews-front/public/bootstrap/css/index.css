@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(46, 35, 6);
+  color: aliceblue;
+}
+.card {
+  background-color: rgb(116, 104, 40);
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+h4 {
+  text-align: center;
+  font-size: 28px;
+  padding: 10px 0;
+}
+small {
+  font-size: 16px;
+  padding: 5px 0;
+}
+p {
+  margin-top: 10px;
+  text-align: center;
+  padding: 5px;
+  background: linear-gradient(rgb(40, 40, 40), rgb(78, 19, 19));
+  border: 1px solid black;
+}
+.centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editar {
+  margin: 5px;
+}
+.excluir {
+  margin: 10px 5px;
+}
+img {
+  border: 2px solid black;
+  margin: 20px 0;
+  padding: 2px;
+  max-width: 300px;
+  max-height: 33 0px;
+}

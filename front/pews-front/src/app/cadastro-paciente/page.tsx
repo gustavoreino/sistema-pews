@@ -4,7 +4,7 @@
 
 import React, { useState } from "react";
 import styles from "@/styles/CadastroUser.module.css";
-import {PatientData} from '@/components/types/PatientType';
+import { PatientData } from "@/components/types/PatientType";
 import EditPatient from "@/APIs/editPatient";
 import "@/app/globals.css";
 //import axios from 'axios'; // Importe o Axios para fazer requisições HTTP
@@ -37,7 +37,7 @@ export default function EditUser() {
             // Faça uma requisição POST para a rota de criação de usuário no backend
             const response = await axios.post(
                 `https://localhost:8080/api/pacientes/`,
-                userData
+                PatientData
             );
 
             // Se a requisição for bem-sucedida, redirecione para a página de login
@@ -79,7 +79,7 @@ export default function EditUser() {
                                             onChange={(e) =>
                                                 setName(e.target.value)
                                             }
-                                            placeholder="Nome"
+                                            placeholder="Nome: João Maria Da Silva."
                                             minLength={3}
                                             required
                                         />

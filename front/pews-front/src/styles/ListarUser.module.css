@@ -1,0 +1,78 @@
+body {
+    position: relative;
+}
+
+.margemFacil {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.centroTudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relativeMarcao {
+    position: relative;
+}
+
+/* #biribinha {
+    position: relative;
+} */
+
+.footerMarcao {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #3792cb;
+}
+
+/* tables */
+
+.theadMarcao {
+    background-color: #3792cb;
+    text-align: center;
+}
+
+.tbodyMarcao {
+    background-color: gray;
+}
+
+.thMarcao {
+    text-align: center !important;
+    background-color: #a9b5dfbe;
+}
+
+.tdMarcao {
+    text-align: center !important;
+}
+
+.linkMarcao {
+    text-align: center !important;
+    color: #282727;
+}
+
+.linkMarcao:hover {
+    color: #e7852b;
+    text-decoration: underline;
+}
+
+/* busca */
+
+.relatorioBusca {
+    border: #e7852b 1px solid !important;
+    background-color: #3792cb !important;
+    width: 100%;
+}
+.labelBuscaRelatorio {
+    margin-top: 10px;
+    background-color: #a9b5dfbe !important;
+    color: #e8ebed !important;
+}
+
+.lupaParametro {
+    padding: 11px 20px !important;
+}

@@ -1,0 +1,37 @@
+body {
+    background-color: whitesmoke;
+}
+
+.footerMarcao {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #3792cb;
+}
+
+.margemFacil {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.centroTudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagemPews {
+    width: 100%;
+}
+
+.h2marcao {
+    border-top: 3px solid rgb(21, 21, 21);
+    border-bottom: 3px solid rgb(21, 21, 21);
+    font-size: 38px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #3792cb;
+    margin-bottom: 0 !important;
+}

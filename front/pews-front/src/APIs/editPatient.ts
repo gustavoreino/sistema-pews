@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {PatientData} from '@/components/types/PatientType';
-function EditUser( id: string ) {
-    return Promise.resolve(axios.patch<UserData>(`${process.env.API_URL}/users/update`))
+function EditPatient( id: string ) {
+    return Promise.resolve(axios.patch<PatientData>('https://localhost:8080/api/pacientes/'))
     .then(response => {
         if(response.status.toString() == '200'){
             return response.data;
@@ -13,4 +13,4 @@ function EditUser( id: string ) {
     });
 }
 
-export default EditUser;
+export default EditPatient;
